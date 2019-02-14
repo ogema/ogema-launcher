@@ -1,0 +1,64 @@
+
+OGEMA-Launcher
+Copyright 2009 - 2016
+Fraunhofer-Gesellschaft zur Förderung der angewandten Wissenschaften e.V.
+This software was developed at Fraunhofer Gesellschaft zur Förderung der angewandten Wissenschaften e.V.
+(http://www.fraunhofer.de) and has dependencies on other software as listed below.
+
+I. Used Third-Party Software
+
+This product uses maven-embedder developed by Apache.
+Copyright (c) Apache Software Foundation (http://www.apache.org/)
+Licensed under the Apache License 2.0, January 2004 (http://maven.apache.org/ref/3.2.3/maven-embedder)	 	 	
+
+This product uses commons-cli developed by Apache.
+Copyright (c) Apache Software Foundation (http://www.apache.org/)
+Licensed under the Apache License 2.0, January 2004 (http://commons.apache.org/proper/commons-cli/index.html)
+
+This product uses plexus-utils developed by Apache.
+Copyright (c) Apache Software Foundation (http://www.apache.org/)
+Licensed under the Apache License 2.0, January 2004 (http://plexus.codehaus.org/plexus-utils/license.html)
+
+This product uses maven-settings developed by Apache.
+Copyright (c) Apache Software Foundation (http://www.apache.org/)
+Licensed under the Apache License 2.0, January 2004 (http://plexus.codehaus.org/plexus-utils/license.html)
+
+This product uses maven-settings-builder developed by Apache.
+Copyright (c) Apache Software Foundation (http://www.apache.org/)
+Licensed under the Apache License 2.0, January 2004 (http://plexus.codehaus.org/plexus-utils/license.html)
+
+This product uses plexus-utils developed by Codehaus.
+Copyright (c) Codehaus (http://www.codehaus.org/)
+Licensed under the Apache License 2.0, January 2004 (http://plexus.codehaus.org/plexus-utils/license.html)
+
+This product uses aether-api developed by Eclipse Foundation.
+Copyright (c) Eclipse Foundation (https://eclipse.org/org/foundation/)
+Licensed under the Eclipse Public License - v1.0 (http://www.eclipse.org/legal/epl-v10.html)
+
+This product uses aether-util developed by Eclipse Foundation.
+Copyright (c) Eclipse Foundation (https://eclipse.org/org/foundation/)
+Licensed under the Eclipse Public License - v1.0 (http://www.eclipse.org/legal/epl-v10.html)
+
+This product uses aether-impl developed by Eclipse Foundation.
+Copyright (c) Eclipse Foundation (https://eclipse.org/org/foundation/)
+Licensed under the Eclipse Public License - v1.0 (http://www.eclipse.org/legal/epl-v10.html)
+
+This product uses aether-connector-basic developed by Eclipse Foundation.
+Copyright (c) Eclipse Foundation (https://eclipse.org/org/foundation/)
+Licensed under the Eclipse Public License - v1.0 (http://www.eclipse.org/legal/epl-v10.html)
+
+This product uses aether-transport-file developed by Eclipse Foundation.
+Copyright (c) Eclipse Foundation (https://eclipse.org/org/foundation/)
+Licensed under the Eclipse Public License - v1.0 (http://www.eclipse.org/legal/epl-v10.html)
+
+This product uses aether-transport-http developed by Eclipse Foundation.
+Copyright (c) Eclipse Foundation (https://eclipse.org/org/foundation/)
+Licensed under the Eclipse Public License - v1.0 (http://www.eclipse.org/legal/epl-v10.html)
+
+This product uses maven-aether-provider developed by Eclipse Foundation.
+Copyright (c) Eclipse Foundation (https://eclipse.org/org/foundation/)
+Licensed under the Eclipse Public License - v1.0 (http://www.eclipse.org/legal/epl-v10.html)
+
+II. License Summary
+- Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+- Eclipse Public License (http://www.eclipse.org/legal/epl-v10.html)

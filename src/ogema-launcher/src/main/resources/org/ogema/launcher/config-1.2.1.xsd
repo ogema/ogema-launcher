@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ogema="http://www.ogema-source.net/config"
+	targetNamespace="http://www.ogema-source.net/config"
+	elementFormDefault="qualified">
+	<element name="configuration">
+		<complexType>
+			<all>
+				<element name="frameworkbundle" type="ogema:bundle"
+					minOccurs="0" maxOccurs="1" />
+
+				<element name="bundles" minOccurs="1" maxOccurs="1">
+					<complexType>
+						<sequence>
+							<annotation>
+								<documentation>
+									NOTE: Either
+									<b>file</b>
+									OR
+									<b>groupId, artifactId and version</b>
+									is required!
+								</documentation>
+							</annotation>
+							<element name="bundle" type="ogema:bundle" minOccurs="1"
+								maxOccurs="unbounded" />
+						</sequence>
+					</complexType>
+				</element>
+
+				<element name="properties" minOccurs="0">
+					<complexType>
+						<sequence>
+							<element name="property" minOccurs="1" maxOccurs="unbounded">
+								<complexType>
+									<attribute name="key" type="string" use="required" />
+									<attribute name="value" type="string" use="required" />
+								</complexType>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+
+				<element name="deleteList" minOccurs="0">
+					<complexType>
+						<sequence>
+							<annotation>
+								<documentation>
+									A simple list of files / directories that should be deleted upon a clean
+									start of the OGEMA.
+								</documentation>
+							</annotation>
+							<element name="file" type="string" minOccurs="1"
+								maxOccurs="unbounded" />
+						</sequence>
+					</complexType>
+				</element>
+			</all>
+		</complexType>
+	</element>
+
+	<simpleType name="binDir">
+		<restriction base="string">
+			<pattern
+				value="(([\w\.]+(-|_)?)+(/|\\)?([\w\.]+(-|_)?)+|([\w\.]+(-|_)?)+)+"></pattern>
+		</restriction>
+	</simpleType>
+
+	<simpleType name="fileName">
+		<restriction base="string">
+			<pattern value="[\w\-_\.]+.jar"></pattern>
+		</restriction>
+	</simpleType>
+
+	<complexType name="bundle">
+		<attribute name="dir" type="ogema:binDir" default="bin">
+			<annotation>
+				<documentation>
+					Relative directory location to the bundle.
+					If the
+					bundle couldn't be resolved via maven
+					then this location will be
+					checked. Additionally
+					this location is used during the build phase
+					and
+					the bundle will be copied into this directory.
+				</documentation>
+			</annotation>
+		</attribute>
+		<attribute name="start" type="boolean" default="true" />
+		<attribute name="startLevel" type="integer" default="4" />
+		<attribute name="groupId" type="string">
+			<annotation>
+				<documentation>
+					Group ID of the maven artifact. Must not contain
+					colon(s) (":").
+				</documentation>
+			</annotation>
+		</attribute>
+		<attribute name="artifactId" type="string">
+			<annotation>
+				<documentation>
+					Artifact ID of the maven artifact. Must not contain
+					colon(s) (":").
+				</documentation>
+			</annotation>
+		</attribute>
+		<attribute name="version" type="string">
+			<annotation>
+				<documentation>
+					Version of the maven artifact. Must not contain
+					colon(s) (":").
+				</documentation>
+			</annotation>
+		</attribute>
+		<attribute name="file" type="ogema:fileName">
+			<annotation>
+				<documentation>
+					This attribute contains the file name. It has to end
+					with ".jar" and must not contain any directory
+					structures.
+				</documentation>
+			</annotation>
+		</attribute>
+	</complexType>
+
+</schema>
