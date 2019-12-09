@@ -3,7 +3,7 @@
 
     <groupId>org.ogema.launcher</groupId>
     <artifactId>ogema-launcher</artifactId>
-    <version>1.2.7-SNAPSHOT</version>
+    <version>1.2.8-SNAPSHOT</version>
 
     <properties>
         <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
@@ -19,7 +19,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <aether.version>1.1.0</aether.version>
         <maven.version>3.3.9</maven.version>
-        <year>2017</year>
+        <year>2019</year>
     </properties>
 
     <dependencies>

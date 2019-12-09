@@ -3,7 +3,7 @@
 
     <groupId>org.ogema.launcher</groupId>
     <artifactId>ogema-launcher</artifactId>
-    <version>1.2.7</version>
+    <version>1.2.8</version>
 
     <properties>
         <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>

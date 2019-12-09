@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.ogema.launcher</groupId>
   <artifactId>ogema-launcher</artifactId>
-  <version>1.2.7-SNAPSHOT</version>
+  <version>1.2.8</version>
   <scm>
     <connection>scm:svn:https://www.ogema-source.net/svn/svnrep-ogema-launcher/trunk/</connection>
     <developerConnection>scm:svn:https://www.ogema-source.net/svn/svnrep-ogema-launcher/trunk/</developerConnection>
@@ -408,7 +408,7 @@
     <maven-jar-plugin.version>2.6</maven-jar-plugin.version>
     <maven-source-plugin.version>3.0.0</maven-source-plugin.version>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <year>2017</year>
+    <year>2019</year>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven-assembly-plugin.version>2.6</maven-assembly-plugin.version>
     <maven-find-plugin.version>0.2.5</maven-find-plugin.version>

@@ -477,7 +477,7 @@ public class OgemaFramework {
 			return RestartType.EXIT;
 		}
 		try {
-			if (shutdownHook != null) {
+			if (shutdownHook == null) {
 				installShutdownHook();
 			}
 			framework.init(); // FileNotFoundException
@@ -806,7 +806,7 @@ public class OgemaFramework {
 	 *            - The bundle context of the framework bundle.
 	 * @return This method will return a list of bundles that should be uninstalled.
 	 */
-	private static List<Bundle> installOrUpdateBundles(Map<String, List<Bundle>> currInstalledBundles,
+	private List<Bundle> installOrUpdateBundles(Map<String, List<Bundle>> currInstalledBundles,
 			Map<String, List<BundleInfo>> bundlesToInstall, final Framework framework, boolean strictMode) {
 		Map<String, List<Bundle>> tmpInstalledBundlesNotInConfig = new HashMap<String, List<Bundle>>(
 				currInstalledBundles);
@@ -826,7 +826,15 @@ public class OgemaFramework {
 					} else {
 						// not installed yet:
 						OgemaLauncher.LOGGER.finer("installing bundle: " + bi.getPreferredLocation());
-						fwkContext.installBundle(bi.getPreferredLocation().toString());
+                        URI preferedUri = bi.getPreferredLocation();
+                        String installUrlString = preferedUri.toString();
+                        if (configuration.getOptions().hasOption(LauncherConstants.KnownProgOptions.REFERENCE.getLongSwitch())) {
+                            if (preferedUri.getScheme().equalsIgnoreCase("file")) {
+                                installUrlString = "reference:" + preferedUri.toString();
+                                OgemaLauncher.LOGGER.finer("installing bundle as reference: " + installUrlString);
+                            }
+                        }
+						fwkContext.installBundle(installUrlString);
 
 					}
 					// ??

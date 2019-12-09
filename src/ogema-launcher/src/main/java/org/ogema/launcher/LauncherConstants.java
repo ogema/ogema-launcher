@@ -68,6 +68,7 @@ public interface LauncherConstants {
         SECURITY("security", "security", lh.getStringForHelpOutput("security"), 1, "file" , true),
         //POLICY("policy", "policy", lh.getStringForHelpOutput("policy"), 1, "Java security policy" , true),
 		//REFRESH_BUNDLES("rb", "refresh-bundles", lh.getStringForHelpOutput("refresh_bundles")),
+        REFERENCE(null, "reference", lh.getStringForHelpOutput("reference")),
         REPOSITORIES(null, "repositories", String.format(lh.getStringForHelpOutput("repositories"), MavenResolver.REPOSITORY_CONFIG_DEFAULT), 1, "file", false),
 		REFRESH_TIMEOUT("ut", "refresh-timeout", lh.getStringForHelpOutput("refresh_timeout"), 1, "timeout" ),
 		RESTART("restart", lh.getStringForHelpOutput("restart")),
