@@ -16,6 +16,7 @@ nbactions.xml
 ua_repo.dat
 pom.xml.versionsBackup
 pom.xml.releaseBackup
+dependency-reduced-pom.xml
 timeSeriesConf.xml
 release.properties
 slotsdbdata/
