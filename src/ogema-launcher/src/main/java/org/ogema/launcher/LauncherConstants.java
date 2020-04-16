@@ -50,7 +50,7 @@ public interface LauncherConstants {
 		PROPS("p", "properties", lh.getStringForHelpOutput("properties"),
 				Option.UNLIMITED_VALUES, "file..."),
 //				Option.UNINITIALIZED, "file..."),
-		CLEAN("clean", lh.getStringForHelpOutput("clean")),
+		CLEAN("clean", "clean", lh.getStringForHelpOutput("clean")),
 		OFFLINE("o", "offline", lh.getStringForHelpOutput("offline")),
 		USE_RUNDIR_ONLY("uro", "use-rundir-only", lh.getStringForHelpOutput("userundironly")),
 		/**
@@ -71,7 +71,7 @@ public interface LauncherConstants {
         REFERENCE(null, "reference", lh.getStringForHelpOutput("reference")),
         REPOSITORIES(null, "repositories", String.format(lh.getStringForHelpOutput("repositories"), MavenResolver.REPOSITORY_CONFIG_DEFAULT), 1, "file", false),
 		REFRESH_TIMEOUT("ut", "refresh-timeout", lh.getStringForHelpOutput("refresh_timeout"), 1, "timeout" ),
-		RESTART("restart", lh.getStringForHelpOutput("restart")),
+		RESTART("restart", "restart", lh.getStringForHelpOutput("restart")),
 		UPDATE_BUNDLES("ub", "update-bundles", lh.getStringForHelpOutput("update_bundles")),
 		DEPLOYMENT_PACKAGE("dp", "deployment-package", lh.getStringForHelpOutput("deployment-package")),
 		TAG_SNAPSHOTS("ts", "tag-snapshots", lh.getStringForHelpOutput("tag-snapshots"),1,"isDiff",true),
