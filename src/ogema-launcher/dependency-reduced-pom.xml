@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.ogema.launcher</groupId>
   <artifactId>ogema-launcher</artifactId>
-  <version>1.3.0</version>
+  <version>1.3.1</version>
   <scm>
     <connection>scm:ssh:git@github.com:ogema/ogema-launcher.git</connection>
     <developerConnection>scm:git:ssh:git@github.com:ogema/ogema-launcher.git</developerConnection>
