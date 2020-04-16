@@ -273,8 +273,16 @@ public class MavenResolver extends BundleResolver {
                 if (releasePolicyParams != null) {
                     releasePolicy = parsePolicy(releasePolicyParams);
                 }
+                String user = (String) p.getProperty(id+".user");
+                String password = (String) p.getProperty(id+".password");
+                Authentication auth = null;
+                if (user != null && password != null) {
+                    OgemaLauncher.LOGGER.log(Level.FINE, "adding authentication for {0}", url);
+                    auth = new AuthenticationBuilder().addUsername(user).addPassword(password).build();
+                }
                 RemoteRepository repo = new RemoteRepository.Builder(id, "default", url)
-                        .setReleasePolicy(releasePolicy).setSnapshotPolicy(snapshotPolicy).build();
+                        .setReleasePolicy(releasePolicy).setSnapshotPolicy(snapshotPolicy)
+                        .setAuthentication(auth).build();
                 prototypes.put(url, repo);
             }
             
@@ -395,8 +403,8 @@ public class MavenResolver extends BundleResolver {
 		ArtifactRequest req = new ArtifactRequest(art, _remoteRepos, null);
 		try {
 			ArtifactResult artRes = _repoSys.resolveArtifact(_session, req);
-			OgemaLauncher.LOGGER.log(Level.FINER, this.getClass().getSimpleName() + ": found {0} = {1}",
-					new Object[]{art, artRes.getArtifact().getFile().getName()});
+			OgemaLauncher.LOGGER.log(Level.FINER, this.getClass().getSimpleName() + ": found {0} = {1} in {2}",
+					new Object[]{art, artRes.getArtifact().getFile().getName(), artRes.getRepository()});
 			return artRes.getArtifact().getFile();
 		} catch (ArtifactResolutionException ex) {
 		}
